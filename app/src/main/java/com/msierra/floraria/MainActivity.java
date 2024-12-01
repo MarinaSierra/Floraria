@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -16,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     CardView carta3;
-    LinearLayout hiddenView;
+    FrameLayout frame3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,31 +30,16 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         carta3 = findViewById(R.id.carta3);
-        hiddenView = findViewById(R.id.hidden_view);
 
         carta3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-                if (hiddenView.getVisibility() == View.VISIBLE) {
-                    // The transition of the hiddenView is carried out by the TransitionManager class.
-                    // Here we use an object of the AutoTransition Class to create a default transition
-                    TransitionManager.beginDelayedTransition(carta3, new AutoTransition());
-                    hiddenView.setVisibility(View.GONE);
-
+                for (int i = 0; i < carta3.getChildCount(); i++) {
+                    View child = carta3.getChildAt(i);
+                    child.setVisibility(View.INVISIBLE);
                 }
 
-                // If the CardView is not expanded, set its visibility to
-                // visible and change the expand more icon to expand less.
-                else {
-                    TransitionManager.beginDelayedTransition(carta3, new AutoTransition());
-                    hiddenView.setVisibility(View.VISIBLE);
-                    for (int i = 0; i < carta3.getChildCount(); i++) {
-                        View child = carta3.getChildAt(i);
-                        child.setVisibility(View.INVISIBLE);
-                    }
-                }
+
             }
         });
 
