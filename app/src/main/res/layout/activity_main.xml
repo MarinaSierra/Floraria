@@ -26,34 +26,34 @@
         app:layout_constraintTop_toTopOf="@+id/guideline"
         style="@style/cards">
 
-        <ImageView
-            android:id="@+id/img1"
-            android:layout_width="138dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:src="@drawable/flower1" />
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="138dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/flower1" />
 
-        <TextView
-            android:layout_width="69dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Ramo 1"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Ramo 1"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="20€"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="20€"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/carta2"
@@ -63,34 +63,34 @@
         app:layout_constraintStart_toStartOf="@id/main"
         app:layout_constraintTop_toTopOf="@+id/guideline">
 
-        <ImageView
-            android:id="@+id/img2"
-            android:layout_width="138dp"
-            android:layout_height="142dp"
-            android:layout_gravity="center"
-            android:src="@drawable/flower2" />
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="138dp"
+                android:layout_height="142dp"
+                android:layout_gravity="center"
+                android:src="@drawable/flower2" />
 
-        <TextView
-            android:layout_width="69dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Ramo 2"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Ramo 2"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="20€"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="20€"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/carta3"
@@ -100,33 +100,33 @@
         app:layout_constraintStart_toStartOf="@id/main"
         style="@style/cards">
 
-        <ImageView
-            android:id="@+id/img3"
-            android:layout_width="156dp"
-            android:layout_height="116dp"
-            android:layout_gravity="center"
-            android:src="@drawable/flower3" />
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="156dp"
+                android:layout_height="116dp"
+                android:layout_gravity="center"
+                android:src="@drawable/flower3" />
 
-        <TextView
-            android:layout_width="69dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Ramo 3"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Ramo 3"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="20€"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="20€"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/hidden_view"
@@ -207,23 +207,23 @@
         app:layout_constraintStart_toStartOf="@id/main"
         style="@style/cards">
 
-        <ImageView
-            android:id="@+id/img4"
-            android:layout_width="138dp"
-            android:layout_height="127dp"
-            android:layout_gravity="center"
-            android:src="@drawable/flower4" />
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="138dp"
+                android:layout_height="127dp"
+                android:layout_gravity="center"
+                android:src="@drawable/flower4" />
 
-        <TextView
-            android:layout_width="69dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Ramo 4"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Ramo 4"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         <TextView
             android:layout_width="50dp"
@@ -263,10 +263,20 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="119dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="642dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="642dp" />
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
