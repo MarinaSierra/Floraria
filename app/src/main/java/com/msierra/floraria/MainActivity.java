@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
@@ -28,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        frame3=findViewById(R.id.frame);
-        frame3.setVisibility(View.INVISIBLE);
         setContentView(R.layout.activity_main);
 
 
@@ -78,16 +78,25 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        carta3=findViewById(R.id.carta3);
+        frame3=findViewById(R.id.frame);
+        Animation loadTobToBottom = AnimationUtils.loadAnimation(this, R.anim.expand_description);
 
         carta3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                frame3.setVisibility(View.VISIBLE);
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame, new FlorFragment3())
-                        .commit();
+                boolean visible = false;
+                if(!visible){
+                    frame3.setVisibility(View.VISIBLE);
+                    frame3.setAnimation(loadTobToBottom);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.frame, new FlorFragment3())
+                            .commit();
+                }else{
+                    frame3.setVisibility(View.INVISIBLE);
+                }
+
             }
         });
-
     }
 }
