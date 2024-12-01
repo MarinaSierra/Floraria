@@ -2,4 +2,5 @@
     <string name="app_name">Floraria</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ramo3_descripcion">Un ramo de flores de Esparta se refiere a un arreglo floral compuesto por flores, hierbas y ramas, que pueden ser naturales o artificiales, que se utilizan para expresar sentimientos y celebrar ocasiones especiales. En el contexto de la cultura griega, Esparta era una ciudad-estado conocida por su valor militar y su disciplina, por lo que un ramo de flores de Esparta podría simbolizar la belleza y la fortaleza.</string>
 </resources>
