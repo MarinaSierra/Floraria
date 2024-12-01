@@ -27,6 +27,5 @@ public class Fragment4 extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TextView txt1 = view.findViewById()
     }
 }

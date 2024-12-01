@@ -3,21 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment4">
-
-
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
     <TextView
-        android:id="@+id/"
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Descripcion: "
         android:textAlignment="center"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
+        />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Un delicado ramo compuesto por tulipanes blancos, rosas rosadas y pequeños lirios del valle, envuelto en papel kraft natural. Las flores están dispuestas con un toque silvestre, acompañadas de ramitas de eucalipto que añaden frescura y un aroma sutil. El diseño transmite elegancia y serenidad, ideal para ocasiones románticas o momentos especiales. Una cinta de raso azul claro cierra el conjunto con un detalle encantador. Perfecto para regalar y alegrar el día de alguien."
-        android:textAlignment="center" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintVertical_bias="0.0">
 
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Un delicado ramo compuesto por tulipanes blancos, rosas rosadas y pequeños lirios del valle, envuelto en papel kraft natural. Las flores están dispuestas con un toque silvestre, acompañadas de ramitas de eucalipto que añaden frescura y un aroma sutil. El diseño transmite elegancia y serenidad, ideal para ocasiones románticas o momentos especiales. Una cinta de raso azul claro cierra el conjunto con un detalle encantador. Perfecto para regalar y alegrar el día de alguien."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

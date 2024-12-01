@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         CardView cv4 = findViewById(R.id.carta4);
 
-
         cv4.setOnClickListener(v ->{
 
             if(visible){
@@ -30,11 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 // Iterar sobre todos los hijos del CardView y ocultarlos
                 for (int i = 0; i < cv4.getChildCount(); i++) {
                     View child = cv4.getChildAt(i);
-                    child.setVisibility(View.INVISIBLE);
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.frg4, new Fragment4())
-                            .commit();
+                    child.setVisibility(View.GONE);
                 }
+                findViewById(R.id.frg4).setVisibility(View.VISIBLE);
+
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frg4, new Fragment4())
+                        .commit();
             }
             else{
                 visible = true;
@@ -42,9 +43,8 @@ public class MainActivity extends AppCompatActivity {
                     View child = cv4.getChildAt(i);
                     child.setVisibility(View.VISIBLE);
                 }
+                findViewById(R.id.frg4).setVisibility(View.INVISIBLE);
             }
-
-
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
