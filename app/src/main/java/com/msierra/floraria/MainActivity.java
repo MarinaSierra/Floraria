@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        frame3=findViewById(R.id.frame);
+        frame3.setVisibility(View.INVISIBLE);
         setContentView(R.layout.activity_main);
 
 
@@ -76,17 +78,14 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        carta3 = findViewById(R.id.carta3);
 
         carta3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (int i = 0; i < carta3.getChildCount(); i++) {
-                    View child = carta3.getChildAt(i);
-                    child.setVisibility(View.INVISIBLE);
-                }
-
-
+                frame3.setVisibility(View.VISIBLE);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame, new FlorFragment3())
+                        .commit();
             }
         });
 
