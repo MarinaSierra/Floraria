@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     CardView carta3;
     FrameLayout frame3;
-
+    boolean visible = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,15 +38,17 @@ public class MainActivity extends AppCompatActivity {
         carta3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean visible = false;
+
                 if(!visible){
                     frame3.setVisibility(View.VISIBLE);
                     frame3.setAnimation(loadTobToBottom);
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.frame, new FlorFragment3())
                             .commit();
+                    visible=true;
                 }else{
                     frame3.setVisibility(View.INVISIBLE);
+                    visible=false;
                 }
 
             }
