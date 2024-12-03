@@ -9,7 +9,7 @@
     android:background="@color/lightgreypink">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imagen"
         android:layout_width="136dp"
         android:layout_height="112dp"
         android:src="@drawable/logotipo"
