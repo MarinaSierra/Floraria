@@ -9,6 +9,7 @@
     android:background="@color/lightgreypink">
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="136dp"
         android:layout_height="112dp"
         android:src="@drawable/logotipo"
@@ -164,6 +165,19 @@
             android:textSize="15sp"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:layout_width="402dp"
+        android:layout_height="682dp"
+        android:elevation="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.fragment.app.FragmentContainerView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
