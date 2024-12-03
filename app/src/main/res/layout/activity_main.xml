@@ -5,9 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/lightgreypink">
 
     <ImageView
+        android:id="@+id/imagen"
         android:layout_width="136dp"
         android:layout_height="112dp"
         android:src="@drawable/logotipo"
@@ -18,20 +20,11 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/carta1"
-        android:layout_width="188dp"
-        android:layout_height="255dp"
-        android:layout_margin="10dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="12dp"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/main"
-        app:layout_constraintTop_toTopOf="@+id/guideline">
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        style="@style/cards">
 
         <ImageView
             android:id="@+id/img1"
@@ -64,16 +57,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/carta2"
-        android:layout_width="188dp"
-        android:layout_height="255dp"
-        android:layout_margin="10dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="12dp"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
+        style="@style/cards"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.973"
         app:layout_constraintStart_toStartOf="@id/main"
@@ -110,20 +94,11 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/carta3"
-        android:layout_width="188dp"
-        android:layout_height="255dp"
-        android:layout_margin="10dp"
-        android:layout_marginBottom="8dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="12dp"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.004"
-        app:layout_constraintStart_toStartOf="@id/main">
+        app:layout_constraintStart_toStartOf="@id/main"
+        style="@style/cards">
 
         <ImageView
             android:id="@+id/img3"
@@ -156,20 +131,11 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/carta4"
-        android:layout_width="188dp"
-        android:layout_height="255dp"
-        android:layout_margin="10dp"
-        android:layout_marginBottom="8dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="12dp"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.973"
-        app:layout_constraintStart_toStartOf="@id/main">
+        app:layout_constraintStart_toStartOf="@id/main"
+        style="@style/cards">
 
         <ImageView
             android:id="@+id/img4"
@@ -207,6 +173,18 @@
     </androidx.cardview.widget.CardView>
 
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:layout_width="402dp"
+        android:layout_height="682dp"
+        android:elevation="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.fragment.app.FragmentContainerView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"

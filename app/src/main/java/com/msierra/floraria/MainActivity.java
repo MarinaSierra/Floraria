@@ -11,14 +11,18 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
     Boolean visible = true;
 
 
+
+    CardView cardView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
 
         CardView cv4 = findViewById(R.id.carta4);
 
@@ -44,6 +48,18 @@ public class MainActivity extends AppCompatActivity {
                     child.setVisibility(View.VISIBLE);
                 }
                 findViewById(R.id.frg4).setVisibility(View.INVISIBLE);
+        cardView1 = findViewById(R.id.carta1);
+
+        cardView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (savedInstanceState == null) {
+                    getSupportFragmentManager().beginTransaction()
+                            .setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.zoom_in, R.anim.zoom_out)
+                            .setReorderingAllowed(true)
+                            .add(R.id.fragment_container_view, flor1_fragment.class, null)
+                            .commit();
+                }
             }
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
