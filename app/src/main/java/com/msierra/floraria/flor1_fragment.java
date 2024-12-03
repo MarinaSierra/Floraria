@@ -7,14 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link flor1_datos#newInstance} factory method to
+ * Use the {@link flor1_fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class flor1_datos extends Fragment {
-
+public class flor1_fragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -24,7 +24,7 @@ public class flor1_datos extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public flor1_datos() {
+    public flor1_fragment() {
         // Required empty public constructor
     }
 
@@ -37,8 +37,8 @@ public class flor1_datos extends Fragment {
      * @return A new instance of fragment flor1_datos.
      */
     // TODO: Rename and change types and number of parameters
-    public static flor1_datos newInstance(String param1, String param2) {
-        flor1_datos fragment = new flor1_datos();
+    public static flor1_fragment newInstance(String param1, String param2) {
+        flor1_fragment fragment = new flor1_fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -53,6 +53,7 @@ public class flor1_datos extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override

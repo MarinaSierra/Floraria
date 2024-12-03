@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".flor1_datos">
+    tools:context=".flor1_fragment"
+    android:id="@+id/fragment">
 
-</FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/frame"
+        android:layout_width="443dp"
+        android:layout_height="723dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="268dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fragment">
+
+        <ImageView
+            android:id="@+id/imagen"
+            android:layout_width="wrap_content"
+            android:layout_height="232dp"
+            android:background="@color/white"
+            android:src="@drawable/flower1"
+            app:layout_constraintEnd_toEndOf="@id/fragment"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/fragment"
+            app:layout_constraintTop_toTopOf="@id/fragment" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="368dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="228dp"
+            android:background="@color/black"
+            android:text="RAMO DE FLORES 1:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="341dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/texto_flor"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
