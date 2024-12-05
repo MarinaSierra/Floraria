@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
         });
         carta3=findViewById(R.id.carta3);
         frame3=findViewById(R.id.frame);
-        Animation loadTobToBottom = AnimationUtils.loadAnimation(this, R.anim.expand_description);
 
         carta3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if(!visible){
+                    Animation loadTobToBottom = AnimationUtils.loadAnimation(MainActivity.this, R.anim.expand_description);
                     frame3.setVisibility(View.VISIBLE);
                     frame3.setAnimation(loadTobToBottom);
                     getSupportFragmentManager().beginTransaction()
@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
                             .commit();
                     visible=true;
                 }else{
+                    Animation loadTobToBottom = AnimationUtils.loadAnimation(MainActivity.this, R.anim.contract_description);
+                    frame3.setAnimation(loadTobToBottom);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.frame, new FlorFragment3())
+                            .commit();
                     frame3.setVisibility(View.INVISIBLE);
                     visible=false;
                 }
