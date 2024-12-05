@@ -30,22 +30,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction transaction =  fragmentManager.beginTransaction();
                 FlorFragment2 flor  = new FlorFragment2();
-                transaction.add(R.id.frame,flor);
-                transaction.commit();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame, flor)
+                        .commit();
 
                 if(!visible){
                             frame2.setVisibility(View.VISIBLE);
-
-
-
                              visible=true;
-                        }else{
+                }else{
                             frame2.setVisibility(View.INVISIBLE);
                             visible=false;
-                        }
+                }
 
             }
         });
