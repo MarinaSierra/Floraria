@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">Floraria</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="texto_flor">El ramo está protagonizado por las majestuosas lilas,
         cuyas flores de forma acampanada aportan un toque de sofisticación y delicadeza.
         Sus pétalos suaves y aterciopelados invitan al tacto y desprenden una fragancia sutilmente dulce.
         Acompañando a las lilas, encontramos hermosas rosas de diversos tonos de rosa, que añaden un
         toque de pasión y romanticismo al arreglo. La combinación de ambas flores crea un
         contraste visualmente atractivo y evoca una sensación de armonía y equilibrio.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ramo3_descripcion">Un ramo de flores de Esparta se refiere a un arreglo floral compuesto por flores, hierbas y ramas, que pueden ser naturales o artificiales, que se utilizan para expresar sentimientos y celebrar ocasiones especiales. En el contexto de la cultura griega, Esparta era una ciudad-estado conocida por su valor militar y su disciplina, por lo que un ramo de flores de Esparta podría simbolizar la belleza y la fortaleza.</string>
 </resources>

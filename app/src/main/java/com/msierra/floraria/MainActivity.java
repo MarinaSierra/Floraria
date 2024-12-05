@@ -8,6 +8,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     CardView carta3;
     FrameLayout frame3;
     boolean visible = false;
-
     CardView cardView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
