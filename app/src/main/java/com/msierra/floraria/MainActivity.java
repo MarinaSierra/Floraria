@@ -1,5 +1,8 @@
 package com.msierra.floraria;
 
+import static androidx.core.app.PendingIntentCompat.getActivity;
+
+import android.app.Activity;
 import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
@@ -18,14 +21,17 @@ import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
-
+    View activity;
     CardView carta3;
     FrameLayout frame3, frame1;
-    boolean visible = false, activado = false;
+    boolean visible = false;
     CardView cardView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-
+        activity=findViewById(R.id.main);
         CardView cv4 = findViewById(R.id.carta4);
 
         cv4.setOnClickListener(v -> {
@@ -65,11 +71,22 @@ public class MainActivity extends AppCompatActivity {
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(savedInstanceState==null){
-                    getSupportFragmentManager().beginTransaction()
-                            .setReorderingAllowed(true)
-                            .add(R.id.fragment_container_view, flor1_fragment.class, null)
-                            .commit();
+                getSupportFragmentManager().beginTransaction()
+                        .setReorderingAllowed(true)
+                        .add(R.id.fragment_container_view, flor1_fragment.class, null)
+                        .commit();
+            }
+        });
+
+        activity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                Fragment fragment = fragmentManager.findFragmentById(R.id.fragment_container_view);
+                if (fragment != null) {
+                    FragmentTransaction transaction = fragmentManager.beginTransaction();
+                    transaction.remove(fragment);
+                    transaction.commit();
                 }
             }
         });
