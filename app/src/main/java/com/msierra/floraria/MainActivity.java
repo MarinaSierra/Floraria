@@ -1,7 +1,8 @@
 package com.msierra.floraria;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import static androidx.core.app.PendingIntentCompat.getActivity;
+
+import android.app.Activity;
 import android.os.Bundle;
 
 import android.view.View;
@@ -20,21 +21,27 @@ import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
-
-
+    View activity;
     CardView carta3, flor2, cardView1;
     FrameLayout frame3, frame1, frame2;
-    boolean visible = false, activado = false;
+    boolean visible = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        
+      
+        activity=findViewById(R.id.main);
 
+      
         flor2 = findViewById(R.id.carta2);
         frame2 = findViewById(R.id.frame);
         frame2.setVisibility(View.INVISIBLE);
@@ -117,11 +124,22 @@ public class MainActivity extends AppCompatActivity {
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(savedInstanceState==null){
-                    getSupportFragmentManager().beginTransaction()
-                            .setReorderingAllowed(true)
-                            .add(R.id.fragment_container_view, flor1_fragment.class, null)
-                            .commit();
+                getSupportFragmentManager().beginTransaction()
+                        .setReorderingAllowed(true)
+                        .add(R.id.fragment_container_view, flor1_fragment.class, null)
+                        .commit();
+            }
+        });
+
+        activity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                Fragment fragment = fragmentManager.findFragmentById(R.id.fragment_container_view);
+                if (fragment != null) {
+                    FragmentTransaction transaction = fragmentManager.beginTransaction();
+                    transaction.remove(fragment);
+                    transaction.commit();
                 }
             }
         });
