@@ -100,7 +100,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="@id/main">
 
         <ImageView
@@ -130,7 +130,7 @@
             android:text="20€"
             android:textSize="15sp"
             android:textStyle="bold" />
-      
+
         <LinearLayout
             android:id="@+id/hidden_view"
             android:layout_width="match_parent"
@@ -193,13 +193,6 @@
                     android:textSize="20dp" />
             </LinearLayout>
         </LinearLayout>
-        <!--FRAGMENT KEVIN-->
-        <FrameLayout
-            android:id="@+id/flor3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </FrameLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -273,19 +266,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="642dp" />
+        app:layout_constraintGuide_begin="841dp" />
     <!--FRAGMENT ANAHÍ-->
+
+
+    <!--FRAGMENT KEVIN-->
+
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="447dp"
         android:layout_height="228dp"
-        android:layout_width="353dp"
-        android:layout_height="537dp"
-        android:layout_marginBottom="50dp"
         android:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flor3"
+        android:layout_width="447dp"
+        android:layout_height="228dp"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
     </FrameLayout>
 

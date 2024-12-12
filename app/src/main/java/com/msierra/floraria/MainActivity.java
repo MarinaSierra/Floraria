@@ -55,18 +55,18 @@ public class MainActivity extends AppCompatActivity {
                         .commit();
 
                 if(!visible){
-                            frame2.setVisibility(View.VISIBLE);
-                             visible=true;
+                    frame2.setVisibility(View.VISIBLE);
+                     visible=true;
                 }else{
-                            frame2.setVisibility(View.INVISIBLE);
-                            visible=false;
+                    frame2.setVisibility(View.INVISIBLE);
+                    visible=false;
                 }
 
             }
         });
 
         carta3=findViewById(R.id.carta3);
-        frame3=findViewById(R.id.frame);
+        frame3=findViewById(R.id.flor3);
 
         carta3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,14 +77,14 @@ public class MainActivity extends AppCompatActivity {
                     frame3.setVisibility(View.VISIBLE);
                     frame3.setAnimation(loadTobToBottom);
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.frame, new FlorFragment3())
+                            .replace(R.id.flor3, new FlorFragment3())
                             .commit();
                     visible=true;
                 }else{
                     Animation loadTobToBottom = AnimationUtils.loadAnimation(MainActivity.this, R.anim.contract_description);
                     frame3.setAnimation(loadTobToBottom);
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.frame, new FlorFragment3())
+                            .replace(R.id.flor3, new FlorFragment3())
                             .commit();
                     frame3.setVisibility(View.INVISIBLE);
                     visible=false;
