@@ -12,10 +12,11 @@
         android:id="@+id/imagen"
         android:layout_width="136dp"
         android:layout_height="112dp"
+        android:layout_marginBottom="80dp"
         android:src="@drawable/logotipo"
         app:layout_constraintBottom_toTopOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="@id/main"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="@id/main" />
 
     <androidx.cardview.widget.CardView
@@ -94,11 +95,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/carta3"
+        style="@style/cards"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.004"
-        app:layout_constraintStart_toStartOf="@id/main"
-        style="@style/cards">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/main">
 
         <ImageView
             android:id="@+id/img3"
@@ -118,15 +120,15 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:text="20€"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="20€"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/hidden_view"
@@ -244,15 +246,17 @@
     </androidx.cardview.widget.CardView>
 
     <!--FRAGMENT MARINA-->
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_view"
-        android:layout_width="402dp"
-        android:layout_height="682dp"
+        android:layout_width="280dp"
+        android:layout_height="458dp"
         android:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324">
 
     </androidx.fragment.app.FragmentContainerView>
 
@@ -261,24 +265,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="119dp" />
+        app:layout_constraintGuide_begin="244dp" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="642dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="851dp" />
 
-        <FrameLayout
-            android:id="@+id/frame"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="640dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="447dp"
+        android:layout_height="228dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.996">
 
-        </FrameLayout>
+    </FrameLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

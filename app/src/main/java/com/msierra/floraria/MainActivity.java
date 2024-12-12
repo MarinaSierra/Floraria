@@ -19,11 +19,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
     CardView carta3;
     FrameLayout frame3, frame1;
-    boolean visible = false;
+    boolean visible = false, activado = false;
     CardView cardView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,22 +65,11 @@ public class MainActivity extends AppCompatActivity {
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!visible){
-                    Animation loadTobToBottom = AnimationUtils.loadAnimation(MainActivity.this, R.anim.expand_description);
-                    frame1.setVisibility(View.VISIBLE);
-                    frame1.setAnimation(loadTobToBottom);
+                if(savedInstanceState==null){
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container_view, new flor1_fragment())
+                            .setReorderingAllowed(true)
+                            .add(R.id.fragment_container_view, flor1_fragment.class, null)
                             .commit();
-                    visible=true;
-                }else{
-                    Animation loadTobToBottom = AnimationUtils.loadAnimation(MainActivity.this, R.anim.contract_description);
-                    frame1.setAnimation(loadTobToBottom);
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container_view, new flor1_fragment())
-                            .commit();
-                    frame1.setVisibility(View.INVISIBLE);
-                    visible=false;
                 }
             }
         });
