@@ -22,7 +22,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     CardView carta3;
-    FrameLayout frame3;
+    FrameLayout frame3, frame1;
     boolean visible = false;
     CardView cardView1;
     @Override
@@ -59,16 +59,26 @@ public class MainActivity extends AppCompatActivity {
         });
 
         cardView1 = findViewById(R.id.carta1);
-
+        frame1=findViewById(R.id.fragment_container_view);
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (savedInstanceState == null) {
+                if(!visible){
+                    Animation loadTobToBottom = AnimationUtils.loadAnimation(MainActivity.this, R.anim.expand_description);
+                    frame1.setVisibility(View.VISIBLE);
+                    frame1.setAnimation(loadTobToBottom);
                     getSupportFragmentManager().beginTransaction()
-                            .setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.zoom_in, R.anim.zoom_out)
-                            .setReorderingAllowed(true)
-                            .add(R.id.fragment_container_view, flor1_fragment.class, null)
+                            .replace(R.id.fragment_container_view, new flor1_fragment())
                             .commit();
+                    visible=true;
+                }else{
+                    Animation loadTobToBottom = AnimationUtils.loadAnimation(MainActivity.this, R.anim.contract_description);
+                    frame1.setAnimation(loadTobToBottom);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container_view, new flor1_fragment())
+                            .commit();
+                    frame1.setVisibility(View.INVISIBLE);
+                    visible=false;
                 }
             }
         });
