@@ -124,9 +124,16 @@ public class MainActivity extends AppCompatActivity {
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Esto inicia una nueva transacción de fragmento a través del FragmentManager.
                 getSupportFragmentManager().beginTransaction()
+
+                        // Permite al sistema reorganizar las operaciones de transacción para optimizar el rendimiento y reducir posibles errores.
                         .setReorderingAllowed(true)
+
+                        //Agrega el fragmento flor1_fragment a un contenedor con el ID R.id.fragment_container_view.
                         .add(R.id.fragment_container_view, flor1_fragment.class, null)
+
+                        // aplica la transacción.
                         .commit();
             }
         });
@@ -134,12 +141,17 @@ public class MainActivity extends AppCompatActivity {
         activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Obtiene el FragmentManager asociado a la actividad
                 FragmentManager fragmentManager = getSupportFragmentManager();
+
+                //busco mi elemento fragment con el FragmentManager y lo asocio a la variable
                 Fragment fragment = fragmentManager.findFragmentById(R.id.fragment_container_view);
+
+                // compruebo que no sea  nulo
                 if (fragment != null) {
-                    FragmentTransaction transaction = fragmentManager.beginTransaction();
-                    transaction.remove(fragment);
-                    transaction.commit();
+                    FragmentTransaction transaction = fragmentManager.beginTransaction(); // empieza la transacción
+                    transaction.remove(fragment); // elimita el fragmento indicado
+                    transaction.commit(); // aplica los cambios.
                 }
             }
         });
