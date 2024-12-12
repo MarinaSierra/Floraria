@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FlorFragment2">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carta2"
+        android:layout_width="295dp"
+        android:layout_height="498dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="166dp"
+            android:layout_height="136dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/flower2" />
+
+        <TextView
+            android:id="@+id/precio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="20dp"
+            android:text="20€"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="274dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center|top"
+            android:text="Ramo de Lirios"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descripcion"
+            android:layout_width="229dp"
+            android:layout_height="228dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:text="@string/descripcion"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
